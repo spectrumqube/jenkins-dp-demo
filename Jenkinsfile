@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage ('Results'){
+        //stage ('Results'){
             //parallel {
                 stage ('Junit') {
                     steps {
@@ -29,6 +29,6 @@ pipeline {
                     }
                 }
             //}
-        }
+        //}
     }
 }
