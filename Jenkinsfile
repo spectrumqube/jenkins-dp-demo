@@ -16,8 +16,8 @@ pipeline {
                 }
             }
         }
-        //stage ('Results'){
-            //parallel {
+        stage ('Results'){
+            parallel {
                 stage ('Junit') {
                     steps {
                         junit 'target/surefire-reports/*.xml'
@@ -28,7 +28,7 @@ pipeline {
                         sh './jenkins/scripts/deliver.sh'
                     }
                 }
-            //}
-        //}
+            }
+        }
     }
 }
